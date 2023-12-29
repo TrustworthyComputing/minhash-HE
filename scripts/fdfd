@@ -1,0 +1,233 @@
+[33mcommit 2dec0a52492c7a8cf56c1ff0605f2f1822efc40d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Wed Dec 13 11:47:40 2023 -0500
+
+    we have arx200
+
+[33mcommit 2fdf217fa2606ac6cc05e6b5a9a0175ed1088ff1[m
+Author: rostin79s <121708191+rostin79s@users.noreply.github.com>
+Date:   Wed Dec 13 11:36:39 2023 -0500
+
+    Update arx200.cc
+
+[33mcommit 6418c094dad1189fde99cc49ad1e23e14a7c2b19[m
+Author: rostin79s <121708191+rostin79s@users.noreply.github.com>
+Date:   Wed Dec 13 11:35:47 2023 -0500
+
+    Update arx200.cc
+
+[33mcommit d6e1aa2e32d035923b3b73d12a60faca476f14d5[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Wed Dec 13 11:32:49 2023 -0500
+
+    testing arx200
+
+[33mcommit a7aa193c41e94f06270a4f926dc354e49b339c43[m
+Author: cgouert <cgouert@udel.edu>
+Date:   Wed Dec 13 04:25:33 2023 +0000
+
+    Add more naive HDL files
+
+[33mcommit e6c20d9b5dba2f8d31806cf7334cad3396fc8946[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Tue Dec 12 23:09:50 2023 -0500
+
+    naive 100
+
+[33mcommit 16eccc875048e5773428c8e4a703d627f9eabaa0[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Tue Dec 12 22:48:25 2023 -0500
+
+    naive 50 75 ready
+
+[33mcommit aa7640997fc3d4cbe4c8d2feb03a4e323dc303ae[m
+Author: cgouert <cgouert@udel.edu>
+Date:   Wed Dec 13 03:40:05 2023 +0000
+
+    Add more ARX variant HDL files
+
+[33mcommit 59e73eb5030593bece09f0ecfc0c8bb9203ce453[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Tue Dec 12 19:45:44 2023 -0500
+
+    arx 50 75 100 ready
+
+[33mcommit 4a38338c4fb3458984d0f404cabdbe8e50981c5c[m
+Author: cgouert <cgouert@udel.edu>
+Date:   Tue Dec 12 23:52:06 2023 +0000
+
+    Fix CW30
+
+[33mcommit adc044fc5ee937d092c758add9ad6a159b511594[m
+Author: cgouert <cgouert@udel.edu>
+Date:   Tue Dec 12 23:48:12 2023 +0000
+
+    Fix CW20
+
+[33mcommit a8bca25623fa257c0bf522adabbecf3920cd1484[m
+Author: cgouert <cgouert@udel.edu>
+Date:   Tue Dec 12 23:25:55 2023 +0000
+
+    Add Naive HDL files
+
+[33mcommit b6a43907353dc68a0b5022fb18ffd67b4eb8a696[m
+Author: cgouert <cgouert@udel.edu>
+Date:   Tue Dec 12 23:21:10 2023 +0000
+
+    Add ARX30 variants with more hashes
+
+[33mcommit 604aee9b33af2b643f94d95444a5966968c79918[m
+Author: cgouert <cgouert@udel.edu>
+Date:   Tue Dec 12 23:13:29 2023 +0000
+
+    Add HDL files for ARX20 and ARX30
+
+[33mcommit 0728fed607729a8abfd25c0f8791eb66178e74dd[m
+Author: cgouert <cgouert@udel.edu>
+Date:   Tue Dec 12 23:07:20 2023 +0000
+
+    Update ARX10 HDL files
+
+[33mcommit 273d9fca85a4a7423151c1abc92c1e203b782140[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Tue Dec 12 17:57:02 2023 -0500
+
+    naive 20 and 30 added
+
+[33mcommit ca6ef9e15a819153c4ed2e44a779d0be065bf0fb[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Tue Dec 12 17:51:23 2023 -0500
+
+    naive10 ready
+
+[33mcommit c979548b935595d9e77b893dc2aa5077da66a7e1[m
+Author: cgouert <cgouert@udel.edu>
+Date:   Tue Dec 12 22:49:00 2023 +0000
+
+    Add netlist for cw30
+
+[33mcommit 8a4dcc8d56f3b10e816c71ed5d97df76c379055b[m
+Author: rostin79s <121708191+rostin79s@users.noreply.github.com>
+Date:   Tue Dec 12 17:36:38 2023 -0500
+
+    naive10.cc added
+
+[33mcommit 1ea9872a0dde29b227cd2a534894cd3b7a7a9e1c[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Tue Dec 12 17:32:17 2023 -0500
+
+    cw50.v created
+
+[33mcommit 1020ca5f6c22ba31090c3dbdbdffecfa3e9c2729[m
+Author: rostin79s <121708191+rostin79s@users.noreply.github.com>
+Date:   Tue Dec 12 16:56:52 2023 -0500
+
+    Update arx30k50.cc
+
+[33mcommit ecfc867994124c73d03ac6bafcddf2864c35b831[m
+Author: rostin79s <121708191+rostin79s@users.noreply.github.com>
+Date:   Tue Dec 12 16:49:42 2023 -0500
+
+    Update arx30k25.cc
+
+[33mcommit 1729c825146c3f5bbb95568dfc03ab9c5f6bba88[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Tue Dec 12 16:47:51 2023 -0500
+
+    arx 25 and 50 hash cc programs
+
+[33mcommit 091322f6575f34dcaf4f1e8bfc8e99f9c4f41e1a[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Tue Dec 12 16:07:03 2023 -0500
+
+    arx10 arx20 and arx30 are done
+
+[33mcommit 786de97e999715fdbe3ce51edb81d359002684c4[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Tue Dec 12 15:51:17 2023 -0500
+
+    cw10 and cw20 ready
+
+[33mcommit f750b79fc62ed8f920cb754c5e8bd1f8bf94b718[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Tue Dec 12 14:57:30 2023 -0500
+
+    changed prime and a b values for cw30
+
+[33mcommit a7ce91a1f575f4900b7316e99efb54c80c7fdc4d[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Tue Dec 12 13:13:58 2023 -0500
+
+    cw20 is ready and cw10 is fixed
+
+[33mcommit 5bd0bcbb0b39ac90dc26d7b7090a8aaf2d27bced[m
+Author: cgouert <cgouert@udel.edu>
+Date:   Tue Dec 12 12:49:53 2023 -0500
+
+    Fix CW10 Verilog for HELM compatibility
+
+[33mcommit 2a170dfdbada9b0e49665b2973b87d8451855c46[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Tue Dec 12 11:54:24 2023 -0500
+
+    need to fix yosys assignments
+
+[33mcommit 0aaf9bc7e1031b0a7a431d5e211694c7f3a884d6[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Tue Dec 12 10:50:20 2023 -0500
+
+    changes bash scripts and cw10 circuit
+
+[33mcommit bf7f9ed8f6a7300cccbb3da078d52a2dde4d1b31[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Mon Dec 11 11:55:04 2023 -0500
+
+    CW-10
+
+[33mcommit 0fdd168992560059cb2ef2f947946cc02f53e816[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Mon Nov 27 13:23:00 2023 -0500
+
+    changed long int to int due to some problems it generated.
+
+[33mcommit c492d8971cd2c1d1e7ea92bed990ec49c2c4aa2a[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Mon Oct 9 16:36:12 2023 -0400
+
+    changes to make.sh and minhash.cc
+
+[33mcommit 6498928cd019e31f56a0a0b48605c8a9db165083[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Mon Oct 9 14:26:42 2023 -0400
+
+    everything works but no input wires
+
+[33mcommit dbc5ad75c36322f19a46bc6b412862aaa101f7ee[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Mon Oct 9 13:26:11 2023 -0400
+
+    delete stuff
+
+[33mcommit 6bb681be4683bef0d238da2de46410a7d5c44bf1[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Mon Oct 9 13:19:50 2023 -0400
+
+    deleted extra dir
+
+[33mcommit 1a7f6019d9610f5a9bc22b18c2575b253c6d873d[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Mon Oct 9 12:21:45 2023 -0400
+
+    Update README.md
+
+[33mcommit a1afb3710085bed7c3b6afd5dccc1e4431f620af[m
+Author: rostin <rostin.shokri@gmail.com>
+Date:   Mon Oct 9 10:55:52 2023 -0400
+
+    initial commit
+
+[33mcommit 28c5d708c29682028c3fce3a6839fc232bae0e6c[m
+Author: rostin79s <121708191+rostin79s@users.noreply.github.com>
+Date:   Mon Oct 9 10:38:18 2023 -0400
+
+    Initial commit
