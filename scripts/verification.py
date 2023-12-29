@@ -1,44 +1,60 @@
-from sympy import primerange
 import random
 
 def main():
-    names = ["1.txt" , "2.txt"]
+    # input text file.
+    name = "1.txt"
 
-    sets , mod = shingle(names)
-    sets = [set(sets[0]) , set(sets[1])]
-    print("jaccardi is: ", len(sets[0].intersection(sets[1]))/len(sets[0].union(sets[1])))
-    
+    sets , mod = shingle(name)
 
-    n = 100
+    # number of hash functions
+    k = 100
 
-    s = 0
-    for i in range(n):
-        j = minhash_arx(sets,mod)
-        s+=j
-
-    print("CW is : ",s/n)
-
-    s = 0
-    for i in range(n):
-        j = minhash_cw(sets,mod)
-        s+=j
-
-    print("arx is : ",s/n)
-
-
-
-def minhash_cw(sets,mod):
-    k=10     # number of permutations(hash functions)
-    prime_generator = primerange(mod + 1, mod + 100000)
-    p = next(prime_generator)
-    perms=[]
+    p_arx = mod-1
+    perms_arx=[]
     for i in range(k):
-        a = random.randint(1,p-1)
-        b = random.randint(1,p-1)
-        lambda_expr = lambda x , a=a , b=b: (a*x+b) % p
-        perms.append(lambda_expr)
-    
+        b = random.randint(p_arx//2,3*p_arx//2)
+        lambda_expr = lambda x , b=b: (x+b) & p_arx
+        perms_arx.append(lambda_expr)
 
+    p_cw = 4294967311
+    perms_cw=[]
+    for i in range(k):
+        a = random.randint(1,p_cw-1)
+        b = random.randint(1,p_cw-1)
+        lambda_expr = lambda x , a=a , b=b: (a*x+b) % p_cw
+        perms_cw.append(lambda_expr)
+
+
+    dif_cw = dif_arx = 0
+    count = 0
+    for a in range(1):
+        for b in range(1,len(sets)):
+            print(100*'--')
+            print(f'set {a} and  {b}:')
+            jac = len(sets[a].intersection(sets[b]))/len(sets[a].union(sets[b]))
+            print("jaccardi is: ", jac)
+
+
+            j = minhash_arx([sets[a],sets[b]],perms_arx,p_arx)
+            print("arx is : ",j)
+            dif_arx+=abs(jac-j)
+
+
+            j = minhash_cw([sets[a],sets[b]],perms_cw,p_cw)
+            print("cw is : ",j)
+            dif_cw+=abs(jac-j)
+
+            count+=1
+    print(100*'--')
+    print('dif cw :',dif_cw/count)
+    print('dif arx :',dif_arx/count)
+
+
+
+
+def minhash_cw(sets,perms,p):
+
+    k = len(perms)
     sigs = []
     for s in sets:
         sig = [p+1]*k
@@ -57,20 +73,9 @@ def minhash_cw(sets,mod):
             count+=1
     return count/k
 
-def minhash_arx(sets,mod):
-    k=10     # number of permutations(hash functions)
-    prime_generator = primerange(mod + 1, mod + 1000)
-    p = next(prime_generator)
-
-
-    p = mod-1
-    perms=[]
-    for i in range(k):
-        b = random.randint(p//2,3*p//2)
-        lambda_expr = lambda x , b=b: (x+b) & p
-        perms.append(lambda_expr)
+def minhash_arx(sets,perms,p):
     
-
+    k = len(perms)
     sigs = []
     for s in sets:
         sig = [p+1]*k
@@ -93,27 +98,34 @@ def minhash_arx(sets,mod):
 
 
 
-def shingle(names):
-    data = []
-    for name in names:
+def shingle(name):
 
-        with open(name,'r') as file: 
-            d = file.read().lower()
-            data.append(d)
+    with open(name,'r') as file: 
+        text = file.read().lower()
 
-    size = []
-    for i in range(len(data)):
-        size.append(len(data[i]))
 
-    mod = max(size)
-    print(mod)
+    # randomize the text
+
+    data = [text]
+
+    for _ in range(10):
+        for chunk_size in range(1,11):
+            words = text.split()
+
+            word_groups = [words[i:i + chunk_size] for i in range(0, len(words), chunk_size)]
+
+            random.shuffle(word_groups)
+
+            permuted_text = ' '.join([' '.join(group) for group in word_groups])
+            data.append(permuted_text)
+
+
     mod = 2**32
-
     sets = []
     for i in range(len(data)):
-        s = []
+        s = set()
         for j in range(0,len(data[i])-8,1):
-            s.append(hash(data[i][j:j+9])%mod)
+            s.add(hash(data[i][j:j+9])%mod)
         sets.append(s)
 
 
