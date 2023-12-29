@@ -4,4 +4,4 @@ synth
 abc -g simple,-MUX
 splitnets
 stat
-write_verilog -noexpr minhash_in.v
+write_verilog -noexpr ../yosys-netlists/minhash_in.v
