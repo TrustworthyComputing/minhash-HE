@@ -1,4 +1,6 @@
-# minhash
+# MinHash-HE
+
+### Installing Dependencies
 In order to run MinHash homomorphically, we need to install some dependencies.
 
 first, we will build the Google-XLS framework from their [GitHub repository](https://github.com/google/xls). Google-XLS depends on bazel so you need to install bazel beforehand.
@@ -59,3 +61,15 @@ cargo build --release
 Now that we have built all of the dependencies, we start by cloning and running this repository.
 
 note that Yosys, XLS, and HELM builds need to be in the same directory for the scripts to work.
+
+### How to cite this work
+The [MatcHEd article](https://github.com/TrustworthyComputing/minhash-HE/blob/main/MatcHEd.pdf) that details this work can be cited as follows:
+
+```
+@misc{shokri2023MatcHEd,
+    author       = {Rostin Shokri and Charles Gouert and Nektarios Georgios Tsoutsos},
+    title        = {{MatcHEd: Privacy-Preserving Set Similarity based on MinHash}},
+    year         = {2023},
+    note         = {\url{https://github.com/TrustworthyComputing/minhash-HE/blob/main/MatcHEd.pdf}},
+}
+```
