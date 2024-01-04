@@ -62,6 +62,48 @@ Now that we have built all of the dependencies, we start by cloning and running 
 
 note that Yosys, XLS, and HELM builds need to be in the same directory for the scripts to work.
 
+### Running MinHash-HE
+Now we start running our scripts to generate and evaluate our circuits.
+First we go into the minhash-HE directory and run the xls.sh bash script. The commands we use for the Google-XLS is as follows:
+
+```shell
+../../xls/bazel-bin/xls/contrib/xlscc/xlscc "$1".cc > minhash.ir
+../../xls/bazel-bin/xls/tools/opt_main minhash.ir > minhash.opt.ir
+../../xls/bazel-bin/xls/tools/codegen_main minhash.opt.ir \
+  --generator=combinational \
+  --delay_model="unit" \
+  --output_verilog_path="$1".v \
+  --module_name=min_hash \
+  --top=minhash
+```
+now we use Yoysys to generate a netlist from the output verilog using the following commands or running the yosys.ys script file.
+
+```shell
+proc
+flatten
+synth
+abc -g simple,-MUX
+splitnets
+stat
+write_verilog -noexpr ../yosys-netlists/minhash_in.v
+```
+
+now we run HELM preprocessor to generate our homomorphic circuits.
+
+```shell
+cargo run --bin preprocessor --release \
+   --manifest-path=./hdl-benchmarks/Cargo.toml -- \
+   --input ../minhash/yosys-netlists/"$1"_in.v \
+   --output ../minhash/helm-preprocessed-netlists/"$1"_out.v
+```
+now we evaluate the homomorphic circuit generated using HELM.
+
+```shell
+cargo run --bin helm --release -- \
+    --verilog ../minhash/helm-preprocessed-netlists/"$1"_out.v
+```
+we follow these processes for each C++ MinHash program we want to evaluate homomorphically.
+
 ### How to cite this work
 The [MatcHEd article](https://github.com/TrustworthyComputing/minhash-HE/blob/main/MatcHEd.pdf) that details this work can be cited as follows:
 
