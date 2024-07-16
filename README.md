@@ -115,3 +115,6 @@ The [MatcHEd article](https://github.com/TrustworthyComputing/minhash-HE/blob/ma
     note         = {\url{https://github.com/TrustworthyComputing/minhash-HE/blob/main/MatcHEd.pdf}},
 }
 ```
+
+## Acknowledgments
+This work was supported by the National Science Foundation (Award #2239334).
